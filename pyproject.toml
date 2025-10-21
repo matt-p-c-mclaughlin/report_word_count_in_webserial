@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "report_word_count_in_webserial"
+version = "0.1.0"
+description = "Search a webserial for occurrences of a given string and report the count."
+authors = [
+    {name = "Matt", email = "matt.p.c.mclaughlin@gmail.com"}
+]
+license = {text = "Myself"}
+readme = "README.md"
+requires-python = ">=3.6"
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/matt-p-c-mclaughlin/Projects/tree/main/report_word_count_in_webserial"
