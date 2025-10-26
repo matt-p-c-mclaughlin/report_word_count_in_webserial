@@ -2,6 +2,9 @@
 <p>Starting scrape from: <a href=https://www.royalroad.com/fiction/130987/all-jobs-and-classes-i-just-wanted-one-skill-not/chapter/2563494/chapter-01>https://www.royalroad.com/fiction/130987/all-jobs-and-classes-i-just-wanted-one-skill-not/chapter/2563494/chapter-01</a></p><p>Searching for occurrences of: <mark>smirk</mark></p>
               
 
+<details closed><summary>Chapter Count List</summary><p></p>
+              
+
 &emsp;<u>Chapter 01</u>: 0
               
 
@@ -389,8 +392,44 @@
 &emsp;<u>Chapter 129</u>: 6
               
 
-<p>Finished scraping.</p> <h3>Total occurrences of smirk' across 129 chapters: <mark>662</mark></h3><p>Average of 5.13 per chapter.</p>
+&emsp;<u>Chapter 130</u>: 0
               
 
-<p>Time taken: 00:37.88</p>
+&emsp;<u>Chapter 131</u>: 5
+              
+
+&emsp;<u>Chapter 132</u>: 2
+              
+
+&emsp;<u>Chapter 133</u>: 4
+              
+
+&emsp;<u>Chapter 134</u>: 3
+              
+
+&emsp;<u>Chapter 135</u>: 2
+              
+
+&emsp;<u>Chapter 136</u>: 2
+              
+
+&emsp;<u>Chapter 137</u>: 1
+              
+
+&emsp;<u>Chapter 138</u>: 3
+              
+
+&emsp;<u>Chapter 139</u>: 3
+              
+
+&emsp;<u>Chapter 140</u>: 8
+              
+
+</details>
+              
+
+<p>Finished scraping.</p> <h3>Total occurrences of smirk' across 140 chapters: <mark>695</mark></h3><p>Average of 4.96 per chapter.</p>
+              
+
+<p>Time taken: 01:01.45</p>
               

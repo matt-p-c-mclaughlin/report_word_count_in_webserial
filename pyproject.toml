@@ -15,6 +15,7 @@ requires-python = ">=3.6"
 dependencies = [
     "requests",
     "beautifulsoup4",
+    "markdown-pdf",
 ]
 
 [project.urls]

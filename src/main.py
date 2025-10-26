@@ -2,27 +2,11 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import datetime
-import sys
-import os
 from pathlib import Path
 
-
-OG_STDOUT = sys.stdout
-MD_file_path = Path(f"{os.path.abspath(__file__)}/../../Outputs/search-report.md")
-TXT_file_path = Path(f"{os.path.abspath(__file__)}/../../Outputs/search-report.txt")
-
-def reset_output_files():
-    for path in [MD_file_path, TXT_file_path]:
-        if os.path.exists(path):
-            try:
-                os.remove(path)
-                print(f"File '{path}' deleted successfully.")
-            except OSError as e:
-                print(f"Error deleting file '{path}': {e}")
-        
-        path.parent.mkdir(parents=True, exist_ok=True) 
-        path.touch() 
-
+## My helpers
+from init_files import *
+from printers import print_MD, print_TXT
 
 def main():
     start = time.time()
@@ -39,6 +23,9 @@ def main():
 
     print_MD(f"<p>Time taken: {t}</p>")
     print_TXT(f"Time taken: {t}")
+    add_report_to_README()
+
+    print("Exit")
 
 def scrape_chapters(start_url: str, search_string: str, delay: float = 1.0):
     
@@ -68,6 +55,10 @@ Searching for occurrences of: {search_string}\n")
         page_text = soup.get_text()
         count = page_text.lower().count(search_string.lower())
         total_count += count
+
+        
+        if chapter_number == 1:
+            print_MD("<details closed><summary>Chapter Count List</summary><p></p>")
 
         print_MD(f"&emsp;<u>{chap_name}</u>: {count}")
         print_TXT(f"    {chap_name}: {count}")
@@ -99,6 +90,7 @@ Searching for occurrences of: {search_string}\n")
         #time.sleep(delay)  # Be polite
 
     chapter_number -= 1 # Adjust for last increment when no next_url
+    print_MD("</details>")
     
     print_MD(f"<p>Finished scraping.</p> <h3>Total occurrences of {search_string}' \
 across {chapter_number} chapters: <mark>{total_count}</mark></h3>\
@@ -107,21 +99,21 @@ across {chapter_number} chapters: <mark>{total_count}</mark></h3>\
     print_TXT(f"Finished scraping.\n\
 Total occurrences of '{search_string}' across {chapter_number} chapters: {total_count}\n\
 Average of {total_count/chapter_number:.2f} per chapter.")
-
-def print_MD(s : str):
-    with MD_file_path.open('a') as file:
-        sys.stdout = file  # Change the standard output to the file we created.
-        print(f"""
-{s}
-              """)
-        sys.stdout = OG_STDOUT  # Reset the standard output to its original value.
-        
-def print_TXT(s : str):    
-    with TXT_file_path.open('a') as file:
-        sys.stdout = file  # Change the standard output to the file we created.
-        print(s)
-        sys.stdout = OG_STDOUT  # Reset the standard output to its original value.
-     
+  
+### Append report to README.md
+### This is so that when viewed on GitHub, the latest report is visible without needing to open the Outputs folder
+### Readme.md is reset at start of run to Plain_README.md
+def add_report_to_README():
+    try:
+        with open(str(README_file_path), "a", encoding="utf-8") as destination:
+            with open(str(MD_file_path), "r", encoding="utf-8") as source:
+                markdown_text = source.read()
+                destination.write("## Latest Report" + "\n")
+                for line in markdown_text.splitlines():
+                    destination.write(line + "\n")
+    except FileNotFoundError:
+        print(f"Error: {MD_file_path} not found. Please create the file or specify the correct path.")
+        exit()
 
 if __name__ == "__main__":
     main()
