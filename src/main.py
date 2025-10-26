@@ -108,7 +108,7 @@ def add_report_to_README():
         with open(str(README_file_path), "a", encoding="utf-8") as destination:
             with open(str(MD_file_path), "r", encoding="utf-8") as source:
                 markdown_text = source.read()
-                destination.write("## Latest Report" + "\n")
+                destination.write("# Latest Report" + "\n")
                 for line in markdown_text.splitlines():
                     destination.write(line + "\n")
     except FileNotFoundError:
