@@ -431,5 +431,5 @@
 <p>Finished scraping.</p> <h3>Total occurrences of smirk' across 140 chapters: <mark>695</mark></h3><p>Average of 4.96 per chapter.</p>
               
 
-<p>Time taken: 01:01.45</p>
+<p>Time taken: 00:45.35</p>
               

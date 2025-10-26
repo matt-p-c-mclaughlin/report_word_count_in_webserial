@@ -4,10 +4,10 @@ A project to scrape a webpage, count how many times a certain word is used, loca
 
 Currently set up to count "smirk" in [All Jobs and Classes! I Just Wanted One Skill, Not Them All!](https://www.royalroad.com/fiction/130987/all-jobs-and-classes-i-just-wanted-one-skill-not), but can easily be updated. Note- I have a hotfix in that stops counting when it hits a page with the author's username, so if updating the script make sure to hit that too. 
 
-## Key concepts learned
+### Key concepts learned
 
-Scraping with BeautifulSoup, generating reports by redirecting stdout, ...
-## Latest Report
+Scraping with BeautifulSoup, generating reports by redirecting stdout, manipulating text and Markdown files, ...
+# Latest Report
 
 <p>Starting scrape from: <a href=https://www.royalroad.com/fiction/130987/all-jobs-and-classes-i-just-wanted-one-skill-not/chapter/2563494/chapter-01>https://www.royalroad.com/fiction/130987/all-jobs-and-classes-i-just-wanted-one-skill-not/chapter/2563494/chapter-01</a></p><p>Searching for occurrences of: <mark>smirk</mark></p>
               
@@ -441,5 +441,5 @@ Scraping with BeautifulSoup, generating reports by redirecting stdout, ...
 <p>Finished scraping.</p> <h3>Total occurrences of smirk' across 140 chapters: <mark>695</mark></h3><p>Average of 4.96 per chapter.</p>
               
 
-<p>Time taken: 01:01.45</p>
+<p>Time taken: 00:45.35</p>
               
