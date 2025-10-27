@@ -425,11 +425,14 @@
 &emsp;<u>Chapter 140</u>: 8
               
 
+&emsp;<u>Chapter 141</u>: 5
+              
+
 </details>
               
 
-<p>Finished scraping.</p> <h3>Total occurrences of smirk' across 140 chapters: <mark>695</mark></h3><p>Average of 4.96 per chapter.</p>
+<p>Finished scraping.</p> <h3>Total occurrences of smirk' across 141 chapters: <mark>700</mark></h3><p>Average of 4.96 per chapter.</p>
               
 
-<p>Time taken: 00:45.35</p>
+<p>Time taken: 00:43.45</p>
               

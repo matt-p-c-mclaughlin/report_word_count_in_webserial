@@ -141,7 +141,8 @@ Searching for occurrences of: smirk
     Chapter 138: 3
     Chapter 139: 3
     Chapter 140: 8
+    Chapter 141: 5
 Finished scraping.
-Total occurrences of 'smirk' across 140 chapters: 695
+Total occurrences of 'smirk' across 141 chapters: 700
 Average of 4.96 per chapter.
-Time taken: 00:45.35
+Time taken: 00:43.45
